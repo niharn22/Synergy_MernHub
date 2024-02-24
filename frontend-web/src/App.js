@@ -5,6 +5,7 @@ import MyHub from "./pages/MyHub";
 import Uploads from "./pages/Uploads";
 import Recent from "./pages/Recent";
 import Favorites from "./pages/Favorites";
+import BIMViewer from "./pages/BIMViewer";
 import Bin from "./pages/Bin";
 import Storage from "./pages/Storage";
 import Sidebar from "./components/sidebar";
@@ -20,6 +21,7 @@ function App() {
           <Route path="/uploads" element={<Uploads/>} />
           <Route path="/recents" element={<Recent/>} />
           <Route path="/favorites" element={<Favorites/>} />
+          <Route path="/bimviewer" element={<BIMViewer/>} />
           <Route path="/bin" element={<Bin/>} />
           <Route path="/storage" element={<Storage/>} />
         </Routes>

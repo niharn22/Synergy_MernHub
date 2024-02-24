@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Logo from "../assets/hubspot.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faCloud, faTrash, faClock, faStar, faUpload, faBars } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCloud, faTrash, faClock, faStar, faUpload, faBars, faStreetView } from '@fortawesome/free-solid-svg-icons';
 import { faHubspot } from '@fortawesome/free-brands-svg-icons';
 import { NavLink } from "react-router-dom";
 import "../styles/sidebar.css";
@@ -36,6 +36,11 @@ const Sidebar = ({ children }) => {
             path: "/favorites",
             name: "Favorites",
             icon: <FontAwesomeIcon icon={faStar} />
+        },
+        {
+            path: "/bimviewer",
+            name: "BIM Viewer",
+            icon: <FontAwesomeIcon icon={faStreetView} />
         },
         {
             path: "/bin",
