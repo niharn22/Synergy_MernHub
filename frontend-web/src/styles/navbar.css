@@ -1,0 +1,46 @@
+.navbar {
+    position: absolute;
+    top: 0;
+    left: 250px;
+    height: 75px;
+    width: auto;
+    display: flex;
+    align-items: center;
+    gap: 2rem;
+    .search-container {
+        display: flex;
+        justify-content: center;
+        align-items: center;
+        .icon {
+            height: 15px;
+            color: black;
+        }
+        .mg-icon {
+            left: 15px;
+            position: absolute;
+        }
+        .search-bar {
+            height: 30px;
+            width: 50vw;
+            outline: none;
+            background-color: rgb(225, 225, 225);
+            border: none;
+            border-radius: 20px;
+            padding: 5px 50px;
+            font-size: 16px;
+            &::placeholder {
+                font-size: 16px;
+            }
+        }
+        .xm-icon {
+            position: absolute;
+            left: 680px;
+        }
+    }
+    .s-icon {
+        height: 20px;
+        color: black;
+        cursor: pointer;
+        margin-left: 100px;
+    }
+}
