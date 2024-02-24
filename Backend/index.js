@@ -9,9 +9,9 @@ const app = express();
 app.use(express.json());
 
 // Multer configuration
-const upload = multer({ dest: 'uploads/' }); // Destination folder for temporarily storing uploaded files
+const upload = multer({ dest: 'uploads/' }); 
 
-mongoose.connect('mongodb+srv://user2000:nihar123@cluster0.ku5uugz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
+mongoose.connect('mongodb+srv://niharnandoskar:nihar123@cluster0.ku5uugz.mongodb.net/?retryWrites=true&w=majority&appName=Cluster0')
   .then(() => {
     console.log('Connected to MongoDB');
   })
