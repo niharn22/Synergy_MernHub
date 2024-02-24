@@ -1,0 +1,29 @@
+{
+  "project_info": {
+    "project_number": "839865081416",
+    "project_id": "construct-hub-5c971",
+    "storage_bucket": "construct-hub-5c971.appspot.com"
+  },
+  "client": [
+    {
+      "client_info": {
+        "mobilesdk_app_id": "1:839865081416:android:4bf8c1ec8c4d6c4dfb827d",
+        "android_client_info": {
+          "package_name": "com.example.construct_hub"
+        }
+      },
+      "oauth_client": [],
+      "api_key": [
+        {
+          "current_key": "AIzaSyD2VfIiAeStrm9ujlMkQHL9mXHFD1W2tBI"
+        }
+      ],
+      "services": {
+        "appinvite_service": {
+          "other_platform_oauth_client": []
+        }
+      }
+    }
+  ],
+  "configuration_version": "1"
+}
