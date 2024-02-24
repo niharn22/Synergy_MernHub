@@ -38,9 +38,12 @@
         }
     }
     .s-icon {
-        height: 20px;
-        color: black;
-        cursor: pointer;
         margin-left: 100px;
     }
+}
+
+.s-icon, .d-icon {
+    height: 20px;
+    color: black;
+    cursor: pointer;
 }

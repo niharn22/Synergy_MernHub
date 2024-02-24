@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import "../styles/navbar.css";
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faTimes, faGear } from '@fortawesome/free-solid-svg-icons';
+import { faMagnifyingGlass, faTimes, faGear, faDownload } from '@fortawesome/free-solid-svg-icons';
 
 const Navbar = () => {
   const [searchTerm, setSearchTerm] = useState("");
@@ -34,6 +34,9 @@ const Navbar = () => {
       </div>
       <div className="settings">
         <FontAwesomeIcon icon={faGear} className="s-icon" />
+      </div>
+      <div className="download">
+        <FontAwesomeIcon icon={faDownload} className="d-icon" />
       </div>
     </div>
   );
