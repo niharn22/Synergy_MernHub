@@ -9,7 +9,7 @@ import Favorites from "./pages/Favorites";
 import BIMViewer from "./pages/BIMViewer";
 import Bin from "./pages/Bin";
 import Storage from "./pages/Storage";
-import currentUser from "./pages/currentUser";
+import CurrentUser from "./pages/currentUser";
 import Sidebar from "./components/sidebar";
 import "./styles/global.css";
 
@@ -33,7 +33,7 @@ function App() {
           <Route path="/bimviewer" element={<BIMViewer/>} />
           <Route path="/bin" element={<Bin/>} />
           <Route path="/storage" element={<Storage/>} />
-          <Route path="/storage" element={<currentUser/>} />
+          <Route path="/user" element={<CurrentUser/>} />
         </Routes>
       </Sidebar>
       <Navbar 

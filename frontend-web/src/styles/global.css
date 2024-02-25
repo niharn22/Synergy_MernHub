@@ -15,7 +15,7 @@
     color: white;                                                                                               
 }
 
-.bin-container, .favorite-container, .home-container, .canvas-container,
+.bin-container, .favorite-container, .home-container, .canvas-container, .profile-container,
 .myhub-container, .recent-container, .storage-container, .upload-container {
     margin-top: 60px;
 }

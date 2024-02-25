@@ -17,11 +17,11 @@ const Sidebar = ({ children }) => {
             name: "Home",
             icon: <FontAwesomeIcon icon={faHouse} />
         },
-        {
-            path: "/myhub",
-            name: "My Hub",
-            icon: <FontAwesomeIcon icon={faHubspot} />
-        },
+        // {
+        //     path: "/myhub",
+        //     name: "My Hub",
+        //     icon: <FontAwesomeIcon icon={faHubspot} />
+        // },
         {
             path: "/uploads",
             name: "Uploads",
@@ -32,21 +32,21 @@ const Sidebar = ({ children }) => {
             name: "Recents",
             icon: <FontAwesomeIcon icon={faClock} />
         },
-        {
-            path: "/favorites",
-            name: "Favorites",
-            icon: <FontAwesomeIcon icon={faStar} />
-        },
+        // {
+        //     path: "/favorites",
+        //     name: "Favorites",
+        //     icon: <FontAwesomeIcon icon={faStar} />
+        // },
         {
             path: "/bimviewer",
             name: "DWG Viewer",
             icon: <FontAwesomeIcon icon={faStreetView} />
         },
-        {
-            path: "/bin",
-            name: "Bin",
-            icon: <FontAwesomeIcon icon={faTrash} />
-        },
+        // {
+        //     path: "/bin",
+        //     name: "Bin",
+        //     icon: <FontAwesomeIcon icon={faTrash} />
+        // },
         {
             path: "/storage",
             name: "Storage",
