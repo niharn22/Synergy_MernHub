@@ -1,45 +1,48 @@
-import React, { useState } from 'react';
-import "../styles/navbar.css";
-import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faMagnifyingGlass, faTimes, faGear, faDownload } from '@fortawesome/free-solid-svg-icons';
+  import React, { useState } from 'react';
+  import "../styles/navbar.css";
+  import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
+  import { faMagnifyingGlass, faTimes, faGear, faDownload } from '@fortawesome/free-solid-svg-icons';
 
-const Navbar = () => {
-  const [searchTerm, setSearchTerm] = useState("");
+  const Navbar = ({ onSearch }) => {
+    const [searchQuery, setSearchQuery] = useState('');
 
-  const handleInputChange = (event) => {
-    setSearchTerm(event.target.value);
-  };
+    const handleSearchInputChange = (event) => {
+      setSearchQuery(event.target.value);
+      onSearch(event.target.value); 
+    };
 
-  const clearSearchTerm = () => {
-    setSearchTerm("");
-  };
+    const clearSearchTerm = () => {
+      setSearchQuery("");
+      onSearch(""); // Clear the search query
+    };
 
-  return (
-    <div className="navbar">
-      <div className="search-container">
-        <FontAwesomeIcon icon={faMagnifyingGlass} className="icon mg-icon"/>
-        <input
-          className="search-bar"
-          placeholder="Enter the file type"
-          value={searchTerm}
-          onChange={handleInputChange}
-        />
-        {searchTerm && (
-          <FontAwesomeIcon
-            icon={faTimes}
-            className="icon xm-icon"
-            onClick={clearSearchTerm}
+    return (
+      <div className="navbar">
+        <div className="search-container">
+          <FontAwesomeIcon icon={faMagnifyingGlass} className="icon mg-icon"/>
+          <input
+            type='text'
+            className="search-bar"
+            placeholder="Enter the file type"
+            value={searchQuery}
+            onChange={handleSearchInputChange}
           />
-        )}
+          {searchQuery && (
+            <FontAwesomeIcon
+              icon={faTimes}
+              className="icon xm-icon"
+              onClick={clearSearchTerm}
+            />
+          )}
+        </div>
+        <div className="settings">
+          <FontAwesomeIcon icon={faGear} className="s-icon" />
+        </div>
+        <div className="download">
+          <FontAwesomeIcon icon={faDownload} className="d-icon" />
+        </div>
       </div>
-      <div className="settings">
-        <FontAwesomeIcon icon={faGear} className="s-icon" />
-      </div>
-      <div className="download">
-        <FontAwesomeIcon icon={faDownload} className="d-icon" />
-      </div>
-    </div>
-  );
-}
+    );
+  }
 
-export default Navbar;
+  export default Navbar;

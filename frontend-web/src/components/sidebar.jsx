@@ -1,7 +1,7 @@
 import React, { useState } from 'react';
 import Logo from "../assets/hubspot.svg"
 import { FontAwesomeIcon } from '@fortawesome/react-fontawesome';
-import { faHouse, faCloud, faTrash, faClock, faStar, faUpload, faBars, faStreetView } from '@fortawesome/free-solid-svg-icons';
+import { faHouse, faCloud, faTrash, faClock, faStar, faUpload, faBars, faStreetView, faUser } from '@fortawesome/free-solid-svg-icons';
 import { faHubspot } from '@fortawesome/free-brands-svg-icons';
 import { NavLink } from "react-router-dom";
 import "../styles/sidebar.css";
@@ -39,7 +39,7 @@ const Sidebar = ({ children }) => {
         },
         {
             path: "/bimviewer",
-            name: "BIM Viewer",
+            name: "DWG Viewer",
             icon: <FontAwesomeIcon icon={faStreetView} />
         },
         {
@@ -51,6 +51,11 @@ const Sidebar = ({ children }) => {
             path: "/storage",
             name: "Storage",
             icon: <FontAwesomeIcon icon={faCloud} />
+        },
+        {
+            path: "/user",
+            name: "Sameer Gupta",
+            icon: <FontAwesomeIcon icon={faUser} />
         }
     ];
 
