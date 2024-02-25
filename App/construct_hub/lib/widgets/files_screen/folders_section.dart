@@ -58,7 +58,7 @@ class FoldersSection extends StatelessWidget {
                           ),
                         ),
                       ),
-                      SizedBox(height: 0), // Add space between image and text
+                      const SizedBox(height: 0), // Add space between image and text
                       Text(
                         controller.foldersList[index].folderName,
                         maxLines: 1,
@@ -104,7 +104,7 @@ class FoldersSection extends StatelessWidget {
             },
           );
         } else {
-          return CircularProgressIndicator();
+          return const CircularProgressIndicator();
         }
       }),
     );

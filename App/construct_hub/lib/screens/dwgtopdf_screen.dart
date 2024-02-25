@@ -1,11 +1,12 @@
+// ignore_for_file: avoid_print, prefer_const_constructors, deprecated_member_use
+
 import 'dart:async';
 import 'dart:io';
 import 'dart:typed_data';
 import 'package:flutter/material.dart';
-import 'package:fluttertoast/fluttertoast.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:http/http.dart' as http;
-import 'package:url_launcher/url_launcher.dart';
+// import 'package:url_launcher/url_launcher.dart';
 
 class DwgtoPdfScreen extends StatefulWidget {
   const DwgtoPdfScreen({Key? key}) : super(key: key);
@@ -60,15 +61,6 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
         setState(() {
           _pdfBytes = pdfBytes;
         });
-
-        // Schedule the toast message after a delay
-        Timer(Duration(seconds: 3), () {
-          Fluttertoast.showToast(
-            msg: "File converted to PDF successfully",
-            toastLength: Toast.LENGTH_SHORT,
-            gravity: ToastGravity.BOTTOM,
-          );
-        });
       } else {
         print('Request failed with status: ${response.statusCode}');
       }
@@ -78,31 +70,16 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
       setState(() {
         _converting = false;
       });
-    }
-  }
 
-  void _savePdfToDevice() async {
-    if (_pdfBytes != null) {
-      // Save PDF to device
-      // For example, you can use path_provider package to get a directory and save the PDF there
-      // Then open the saved PDF using a PDF viewer package or launch it in another app
-
-      // Example:
-      // final directory = await getApplicationDocumentsDirectory();
-      // final path = '${directory.path}/output.pdf';
-      // final File file = File(path);
-      // await file.writeAsBytes(_pdfBytes!);
-    }
-  }
-
-  void _downloadPdf() async {
-    if (_pdfBytes != null) {
-      final blobUrl = Uri.dataFromBytes(
-        _pdfBytes!,
-        mimeType: 'application/pdf',
-        //Encoding.getByName('utf-8'),
-      ).toString();
-      await launch(blobUrl);
+      // Show snackbar after conversion is completed
+      ScaffoldMessenger.of(context).showSnackBar(
+        SnackBar(
+          content: Text('File converted to PDF successfully'),
+          duration: Duration(seconds: 3),
+          backgroundColor: Colors.green, // Change background color to green
+          behavior: SnackBarBehavior.floating, // Make snackbar floating
+        ),
+      );
     }
   }
 
@@ -113,32 +90,45 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
         title: Text('DWG to PDF Converter'),
       ),
       body: Center(
-        child: Stack(
-          alignment: Alignment.center,
-          children: [
-            Column(
-              mainAxisAlignment: MainAxisAlignment.center,
-              children: <Widget>[
-                ElevatedButton(
-                  onPressed: _pickFile,
-                  child: Text('Select DWG File'),
+        child: Column(
+          mainAxisAlignment: MainAxisAlignment.center,
+          children: <Widget>[
+            ElevatedButton(
+              onPressed: _pickFile,
+              style: ElevatedButton.styleFrom(
+                primary: Colors.orangeAccent, // Change button color to orange
+                onPrimary: Colors.white, // Change text color to white
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25), // Add rounded corners
                 ),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _pickedFile != null && !_converting ? _convertToPdf : null,
-                  child: Text('Convert to PDF'),
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24), // Increase padding
+              ),
+              child: Text(
+                'Select DWG File',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+            SizedBox(height: 20),
+            ElevatedButton(
+              onPressed: _pickedFile != null && !_converting ? _convertToPdf : null,
+              style: ElevatedButton.styleFrom(
+                primary: Colors.blueAccent, // Change button color to blue
+                onPrimary: Colors.white, // Change text color to white
+                shape: RoundedRectangleBorder(
+                  borderRadius: BorderRadius.circular(25), // Add rounded corners
                 ),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _downloadPdf,
-                  child: Text('View PDF'),
-                ),
-                SizedBox(height: 20),
-                ElevatedButton(
-                  onPressed: _savePdfToDevice,
-                  child: Text('Save PDF to Device'),
-                ),
-              ],
+                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24), // Increase padding
+              ),
+              child: Text(
+                'Convert to PDF',
+                style: TextStyle(fontSize: 18),
+              ),
+            ),
+            SizedBox(height: 20),
+            // Animated container to make the spacing lively
+            AnimatedContainer(
+              duration: Duration(milliseconds: 500),
+              height: _converting ? 20 : 0,
             ),
             if (_converting)
               CircularProgressIndicator(),
