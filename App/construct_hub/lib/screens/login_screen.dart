@@ -14,8 +14,8 @@ class LoginScreen extends StatelessWidget {
         begin: Alignment.topCenter,
         end: Alignment.bottomCenter,
         colors: [
-          Colors.deepPurple,
-          Colors.deepPurpleAccent,
+          Colors.lightBlue.shade200,
+          Colors.lightBlue.shade200,
         ],
       )),
       child: Scaffold(

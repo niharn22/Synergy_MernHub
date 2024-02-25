@@ -14,7 +14,7 @@ class HomeHeader extends StatelessWidget {
       child: Column(
         children: [
           Text(
-            "ConstructHub",
+            "Construct Hub",
             style: AppStyles.textStyle(
               fontSize: 28,
               color: AppColors.textColor,
@@ -22,7 +22,7 @@ class HomeHeader extends StatelessWidget {
             ),
           ),
           Text(
-            "Google drive clone",
+            "Build Better Together!",
             style: AppStyles.textStyle(
                 fontSize: 18,
                 color: AppColors.textColor,

@@ -17,8 +17,9 @@ class LoginScreenBody extends StatelessWidget {
           Spacer(),
           Image.asset(
             AppAssets.folderPath,
-            width: 150,
-            height: 150,
+            width: 225,
+            height: 225,
+            alignment: Alignment.center,
             // fit: BoxFit.cover,
           ),
           Spacer(),
@@ -39,24 +40,24 @@ class LoginScreenBody extends StatelessWidget {
               mainAxisAlignment: MainAxisAlignment.center,
               children: [
                 Text(
-                  "Simplify your",
+                  "Streamline",
                   style: AppStyles.textStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       color: AppColors.textColor,
                       fontWeight: FontWeight.bold),
                 ),
                 Text(
-                  "Filing systems",
+                  "Construction Docs",
                   style: AppStyles.textStyle(
-                      fontSize: 18,
+                      fontSize: 20,
                       color: AppColors.textColor,
                       fontWeight: FontWeight.bold),
                 ),
                 const SizedBox(
-                  height: 24,
+                  height: 12,
                 ),
                 Text(
-                  "Keep your files organized more easily",
+                  "Effortlessly Organize, Access, and Collaborate!",
                   textAlign: TextAlign.center,
                   style: AppStyles.textStyle(
                       fontSize: 16,
@@ -82,10 +83,10 @@ class LoginScreenBody extends StatelessWidget {
                       await Get.find<AuthController>().login();
                     },
                     child: Text(
-                      "Let's go",
+                      "Let's Go!",
                       style: AppStyles.textStyle(
                           fontWeight: FontWeight.bold,
-                          fontSize: 14,
+                          fontSize: 18,
                           color: Colors.white),
                     ),
                   ),
