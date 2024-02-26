@@ -23,7 +23,7 @@ class NonViewableWidget extends StatelessWidget {
               foregroundColor: Colors.black,
             ),
             onPressed: () {},
-            child: Text("Downlaod"),
+            child: const Text("Downlaod"),
           )
         ],
       ),

@@ -10,13 +10,13 @@ class StorageContainer extends StatelessWidget {
 
   getSize(int size) {
     if (size < 1000) {
-      return "${size} KB";
+      return "$size KB";
     } else if (size < 1000000) {
       int sizeMb = (size * 0.001).round();
-      return "${sizeMb} MB";
+      return "$sizeMb MB";
     } else {
       int sizeGB = (size * 0.000001).round();
-      return "${sizeGB} GB";
+      return "$sizeGB GB";
     }
   }
 
@@ -44,7 +44,7 @@ class StorageContainer extends StatelessWidget {
           return Column(
             children: [
               Padding(
-                padding: EdgeInsets.only(top: 25, bottom: 35),
+                padding: const EdgeInsets.only(top: 25, bottom: 35),
                 child: Column(
                   children: [
                     CircularPercentIndicator(
@@ -105,7 +105,7 @@ class StorageContainer extends StatelessWidget {
                         ),
                       ),
                     ),
-                    SizedBox(
+                    const SizedBox(
                       height: 20,
                     ),
                     Row(
@@ -122,7 +122,7 @@ class StorageContainer extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Column(
@@ -157,7 +157,7 @@ class StorageContainer extends StatelessWidget {
                                 borderRadius: BorderRadius.circular(5),
                               ),
                             ),
-                            SizedBox(
+                            const SizedBox(
                               width: 5,
                             ),
                             Column(

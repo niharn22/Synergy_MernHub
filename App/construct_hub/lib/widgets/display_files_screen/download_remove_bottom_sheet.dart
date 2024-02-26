@@ -1,4 +1,6 @@
 // import 'dart:developer';
+// ignore_for_file: use_build_context_synchronously
+
 import 'dart:io';
 
 import 'package:construct_hub/controllers/download_controller.dart';
@@ -42,13 +44,13 @@ class _DownloadRemoveBottomSheetState extends State<DownloadRemoveBottomSheet> {
     print(fileDownloaded);
 
     return Container(
-      padding: EdgeInsets.all(32),
+      padding: const EdgeInsets.all(32),
       child: Column(
         mainAxisSize: MainAxisSize.min,
         crossAxisAlignment: CrossAxisAlignment.start,
         children: [
           Text(widget.file.name.split(".")[0]),
-          SizedBox(
+          const SizedBox(
             height: 24,
           ),
           fileDownloaded == true
@@ -76,15 +78,15 @@ class _DownloadRemoveBottomSheetState extends State<DownloadRemoveBottomSheet> {
                     return Row(
                       children: [
                         controller.isDownloading
-                            ? SizedBox(
+                            ? const SizedBox(
                                 width: 15,
                                 height: 15,
                                 child: CircularProgressIndicator(
                                   color: Colors.deepOrange,
                                 ),
                               )
-                            : Icon(EvaIcons.download),
-                        SizedBox(
+                            : const Icon(EvaIcons.download),
+                        const SizedBox(
                           width: 6,
                         ),
                         Text(
@@ -99,7 +101,7 @@ class _DownloadRemoveBottomSheetState extends State<DownloadRemoveBottomSheet> {
                     );
                   }),
                 ),
-          SizedBox(
+          const SizedBox(
             height: 16,
           ),
           InkWell(
@@ -107,7 +109,7 @@ class _DownloadRemoveBottomSheetState extends State<DownloadRemoveBottomSheet> {
               await controller.deleteFile(widget.file);
               Navigator.of(context).pop();
             },
-            child: Row(
+            child: const Row(
               children: [
                 Icon(EvaIcons.fileRemove),
                 SizedBox(

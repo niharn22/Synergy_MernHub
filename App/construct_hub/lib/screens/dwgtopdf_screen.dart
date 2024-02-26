@@ -74,7 +74,7 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
       // Show snackbar after conversion is completed
       ScaffoldMessenger.of(context).showSnackBar(
         SnackBar(
-          content: Text('File converted to PDF successfully'),
+          content: Text('File downloaded and converted to PDF successfully'),
           duration: Duration(seconds: 3),
           backgroundColor: Colors.green, // Change background color to green
           behavior: SnackBarBehavior.floating, // Make snackbar floating

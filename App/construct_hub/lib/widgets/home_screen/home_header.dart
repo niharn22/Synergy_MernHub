@@ -6,7 +6,7 @@ import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 
 class HomeHeader extends StatelessWidget {
-  HomeHeader({super.key});
+  const HomeHeader({super.key});
 
   @override
   Widget build(BuildContext context) {
@@ -33,7 +33,7 @@ class HomeHeader extends StatelessWidget {
           ),
           Container(
             width: double.infinity,
-            padding: EdgeInsets.all(4),
+            padding: const EdgeInsets.all(4),
             margin: const EdgeInsets.only(left: 20, right: 20),
             height: 60,
             decoration: BoxDecoration(
@@ -64,7 +64,7 @@ class HomeHeader extends StatelessWidget {
                       isSelected: controller.tab == "storage",
                     ),
                   )),
-                  SizedBox(
+                  const SizedBox(
                     width: 20,
                   ),
                   Expanded(

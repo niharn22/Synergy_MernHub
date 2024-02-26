@@ -11,11 +11,11 @@ class StorageScreen extends StatelessWidget {
       child: Column(
         children: [
           const SizedBox(height: 40),
-          StorageContainer(),
+          const StorageContainer(),
           SizedBox(
             height: MediaQuery.sizeOf(context).height * 0.1,
           ),
-          UploadOptions()
+          const UploadOptions()
         ],
       ),
     );

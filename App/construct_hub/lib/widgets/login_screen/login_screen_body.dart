@@ -14,7 +14,7 @@ class LoginScreenBody extends StatelessWidget {
       child: Column(
         crossAxisAlignment: CrossAxisAlignment.stretch,
         children: [
-          Spacer(),
+          const Spacer(),
           Image.asset(
             AppAssets.folderPath,
             width: 225,
@@ -22,15 +22,15 @@ class LoginScreenBody extends StatelessWidget {
             alignment: Alignment.center,
             // fit: BoxFit.cover,
           ),
-          Spacer(),
+          const Spacer(),
           Container(
             width: double.infinity,
             margin: const EdgeInsets.only(right: 30, left: 30, bottom: 30),
-            padding: EdgeInsets.all(12),
+            padding: const EdgeInsets.all(12),
             decoration: BoxDecoration(
                 borderRadius: BorderRadius.circular(16),
                 color: Colors.white,
-                boxShadow: [
+                boxShadow: const [
                   BoxShadow(
                     color: Colors.white,
                     spreadRadius: 5,
@@ -94,7 +94,7 @@ class LoginScreenBody extends StatelessWidget {
               ],
             ),
           ),
-          Spacer(
+          const Spacer(
             flex: 2,
           ),
         ],

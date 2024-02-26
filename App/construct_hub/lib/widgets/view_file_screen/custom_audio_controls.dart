@@ -18,7 +18,7 @@ class CustomAudioControls extends StatelessWidget {
             onPressed: () async {
               await audioPlayer.play();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.play_arrow_rounded,
               color: Colors.white,
               size: 64,
@@ -29,14 +29,14 @@ class CustomAudioControls extends StatelessWidget {
             onPressed: () async {
               await audioPlayer.pause();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.pause_rounded,
               color: Colors.white,
               size: 64,
             ),
           );
         }
-        return Icon(
+        return const Icon(
           Icons.play_arrow_rounded,
           size: 64,
           color: Colors.white,

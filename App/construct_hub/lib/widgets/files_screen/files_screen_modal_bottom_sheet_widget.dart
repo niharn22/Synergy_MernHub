@@ -29,7 +29,7 @@ class FilesScreenModalBottomSheetWidget extends StatelessWidget {
             child: Row(
               children: [
                 Icon(EvaIcons.folder, color: AppColors.textColor),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text(
@@ -49,7 +49,7 @@ class FilesScreenModalBottomSheetWidget extends StatelessWidget {
             child: Row(
               children: [
                 Icon(EvaIcons.fileAdd, color: AppColors.textColor),
-                SizedBox(
+                const SizedBox(
                   width: 10,
                 ),
                 Text(

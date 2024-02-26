@@ -16,7 +16,7 @@ class FilesGridView extends StatelessWidget {
       padding: const EdgeInsets.all(16),
       child: GridView.builder(
           itemCount: files.length,
-          gridDelegate: SliverGridDelegateWithFixedCrossAxisCount(
+          gridDelegate: const SliverGridDelegateWithFixedCrossAxisCount(
               crossAxisCount: 2, crossAxisSpacing: 12, mainAxisSpacing: 12),
           itemBuilder: (context, index) {
             return InkWell(
@@ -42,7 +42,7 @@ class FilesGridView extends StatelessWidget {
                             ),
                     ),
                   ),
-                  SizedBox(
+                  const SizedBox(
                     height: 6,
                   ),
                   Row(
@@ -74,7 +74,7 @@ class FilesGridView extends StatelessWidget {
                                 );
                               });
                         },
-                        child: Icon(
+                        child: const Icon(
                           Icons.more_vert,
                         ),
                       )

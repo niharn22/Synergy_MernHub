@@ -6,7 +6,6 @@ import 'package:construct_hub/core/utils/app_colors.dart';
 import 'package:construct_hub/core/utils/app_styles.dart';
 import 'package:flutter/material.dart';
 import 'package:get/get.dart';
-import 'package:get/get_core/src/get_main.dart';
 
 class AddFolderDialog extends StatefulWidget {
   const AddFolderDialog({super.key});
@@ -19,7 +18,6 @@ class _AddFolderDialogState extends State<AddFolderDialog> {
   late TextEditingController folderNameController;
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     folderNameController = TextEditingController();
   }
@@ -40,7 +38,7 @@ class _AddFolderDialogState extends State<AddFolderDialog> {
             Get.back();
             // Get.back();
           },
-          child: Text("Cancel"),
+          child: const Text("Cancel"),
         ),
         TextButton(
           style: TextButton.styleFrom(
@@ -59,7 +57,7 @@ class _AddFolderDialogState extends State<AddFolderDialog> {
               Navigator.pop(context);
             }
           },
-          child: Text("Add folder"),
+          child: const Text("Add folder"),
         ),
       ],
       title: Text(
