@@ -6,7 +6,7 @@ from werkzeug.utils import secure_filename
 app = Flask(__name__)
 
 # Set your ConvertAPI secret
-convertapi.api_secret = 'eLdAzVmHRtQJDfWX'
+convertapi.api_secret = 'your-key'
 
 # Configure the upload folder
 UPLOAD_FOLDER = 'uploads'
