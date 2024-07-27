@@ -61,7 +61,7 @@ class FilesGridView extends StatelessWidget {
                       ),
                       InkWell(
                         overlayColor:
-                            MaterialStateProperty.resolveWith((states) {
+                            WidgetStateProperty.resolveWith((states) {
                           return Colors.transparent;
                         }),
                         onTap: () {

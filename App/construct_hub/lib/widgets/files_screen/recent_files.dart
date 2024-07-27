@@ -26,7 +26,7 @@ class RecentFiles extends StatelessWidget {
               fontWeight: FontWeight.bold,
             ),
           ),
-          SizedBox(
+          const SizedBox(
             height: 12,
           ),
           GetX<FilesAndFolderController>(builder: (controller) {

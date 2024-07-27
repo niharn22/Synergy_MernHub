@@ -11,11 +11,11 @@ import 'package:get/get.dart';
 import 'package:google_sign_in/google_sign_in.dart';
 
 class HomeScreen extends StatelessWidget {
-  HomeScreen({Key? key});
+  HomeScreen({super.key});
 
   final CustomTabController tabController =
       Get.put<CustomTabController>(CustomTabController());
-  
+
   @override
   Widget build(BuildContext context) {
     return Scaffold(
@@ -33,13 +33,14 @@ class HomeScreen extends StatelessWidget {
                     },
                   );
                 },
-                child: Icon(
+                child: const Icon(
                   EvaIcons.folderAdd,
                 ),
               )
-            : SizedBox();
+            : const SizedBox();
       }),
       appBar: PreferredSize(
+        preferredSize: const Size.fromHeight(30),
         child: AppBar(
           backgroundColor: Colors.white,
           elevation: 0,
@@ -49,7 +50,7 @@ class HomeScreen extends StatelessWidget {
               await googleSignIn.signOut();
               await FirebaseAuth.instance.signOut();
             },
-            icon: Icon(
+            icon: const Icon(
               Icons.logout_rounded,
               color: Colors.deepOrange,
             ),
@@ -59,24 +60,23 @@ class HomeScreen extends StatelessWidget {
               onPressed: () {
                 // Navigate to the desired screen here
                 // For example:
-                Get.to(DwgtoPdfScreen());
+                Get.to(const DwgtoPdfScreen());
               },
-              icon: Icon(
+              icon: const Icon(
                 Icons.view_in_ar_sharp,
                 color: Colors.deepOrange,
               ),
             ),
           ],
         ),
-        preferredSize: Size.fromHeight(30),
       ),
       body: SingleChildScrollView(
         child: Column(
           children: [
-            HomeHeader(),
+            const HomeHeader(),
             GetBuilder<CustomTabController>(builder: (controller) {
               return controller.tab == "storage"
-                  ? StorageScreen()
+                  ? const StorageScreen()
                   : FilesScreen();
             }),
           ],

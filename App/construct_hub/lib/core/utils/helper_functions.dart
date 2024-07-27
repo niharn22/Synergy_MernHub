@@ -8,12 +8,12 @@ import 'package:video_compress/video_compress.dart';
 class AppHelpersFunctions {
   static Future<File> compressImage(File file) async {
     try {
-      Uuid uuid = Uuid();
+      Uuid uuid = const Uuid();
       String randomStrng = uuid.v4();
 
       Directory directory = await getTemporaryDirectory();
 
-      String targetPath = directory.path + "/${randomStrng}.jpg";
+      String targetPath = "${directory.path}/$randomStrng.jpg";
       XFile? result = await FlutterImageCompress.compressAndGetFile(
           file.path, targetPath,
           quality: 50);

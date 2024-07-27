@@ -18,7 +18,7 @@ class DownloadDeleteController extends GetxController {
       isDownloading = true;
       update();
       final downloadPath = await getDownloadPath();
-      final path = "${downloadPath}/${file.name.replaceAll(" ", "")}";
+      final path = "$downloadPath/${file.name.replaceAll(" ", "")}";
       var status = await Permission.storage.status;
       if (!status.isGranted) {
         await Permission.storage.request();

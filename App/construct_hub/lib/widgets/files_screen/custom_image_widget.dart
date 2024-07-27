@@ -25,7 +25,7 @@ class CustomImageWidget extends StatelessWidget {
                 imageUrl: url,
               )
             : Image.asset(
-                "assets/images/${extenstion}.png",
+                "assets/images/$extenstion.png",
                 fit: BoxFit.cover,
                 width: 75,
               ),

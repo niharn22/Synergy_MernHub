@@ -38,7 +38,7 @@ class FilesScreen extends StatelessWidget {
         const SizedBox(
           height: 12,
         ),
-        FoldersSection()
+        const FoldersSection()
       ],
     );
   }

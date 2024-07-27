@@ -45,8 +45,8 @@ class _ViewVideoWidgetState extends State<ViewVideoWidget> {
   @override
   Widget build(BuildContext context) {
     if (chewieController == null) {
-      return Center(
-        child: const CircularProgressIndicator(
+      return const Center(
+        child: CircularProgressIndicator(
           color: Colors.deepOrange,
         ),
       );
