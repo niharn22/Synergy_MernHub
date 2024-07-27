@@ -96,12 +96,15 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
             ElevatedButton(
               onPressed: _pickFile,
               style: ElevatedButton.styleFrom(
-                primary: Colors.orangeAccent, // Change button color to orange
-                onPrimary: Colors.white, // Change text color to white
+                foregroundColor: Colors.white,
+                backgroundColor:
+                    Colors.orangeAccent, // Change text color to white
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25), // Add rounded corners
+                  borderRadius:
+                      BorderRadius.circular(25), // Add rounded corners
                 ),
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24), // Increase padding
+                padding: EdgeInsets.symmetric(
+                    vertical: 12, horizontal: 24), // Increase padding
               ),
               child: Text(
                 'Select DWG File',
@@ -110,14 +113,18 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
             ),
             SizedBox(height: 20),
             ElevatedButton(
-              onPressed: _pickedFile != null && !_converting ? _convertToPdf : null,
+              onPressed:
+                  _pickedFile != null && !_converting ? _convertToPdf : null,
               style: ElevatedButton.styleFrom(
-                primary: Colors.blueAccent, // Change button color to blue
-                onPrimary: Colors.white, // Change text color to white
+                foregroundColor: Colors.white,
+                backgroundColor:
+                    Colors.blueAccent, // Change text color to white
                 shape: RoundedRectangleBorder(
-                  borderRadius: BorderRadius.circular(25), // Add rounded corners
+                  borderRadius:
+                      BorderRadius.circular(25), // Add rounded corners
                 ),
-                padding: EdgeInsets.symmetric(vertical: 12, horizontal: 24), // Increase padding
+                padding: EdgeInsets.symmetric(
+                    vertical: 12, horizontal: 24), // Increase padding
               ),
               child: Text(
                 'Convert to PDF',
@@ -130,8 +137,7 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
               duration: Duration(milliseconds: 500),
               height: _converting ? 20 : 0,
             ),
-            if (_converting)
-              CircularProgressIndicator(),
+            if (_converting) CircularProgressIndicator(),
           ],
         ),
       ),

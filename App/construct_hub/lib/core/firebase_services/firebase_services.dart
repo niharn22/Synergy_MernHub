@@ -1,17 +1,12 @@
 import 'dart:io';
 import 'package:cloud_firestore/cloud_firestore.dart';
-import 'package:dio/dio.dart';
 import 'package:construct_hub/core/utils/app_values.dart';
 import 'package:construct_hub/core/utils/helper_functions.dart';
-import 'package:construct_hub/models/file_model.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:firebase_auth/firebase_auth.dart';
 import 'package:firebase_storage/firebase_storage.dart';
-import 'package:flutter/material.dart';
 import 'package:get/get.dart';
 import 'package:mime/mime.dart';
-import 'package:path_provider/path_provider.dart';
-import 'package:permission_handler/permission_handler.dart';
 
 class FirebaseService {
   static Future<void> uploadFolder({required String name}) async {
@@ -177,7 +172,6 @@ class FirebaseService {
       "file_name": fileName,
       "file_type": filteredFileType,
       "file_extenstion": extenstion,
-      // TODO => We will change this later to add folderID
       "folder_id": folderId,
       "file_size": fileSize,
       "date_uploaded": FieldValue.serverTimestamp(),

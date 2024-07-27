@@ -7,7 +7,6 @@ import 'package:construct_hub/models/file_model.dart';
 import 'package:construct_hub/widgets/display_files_screen/files_grid_view.dart';
 // import 'package:construct_hub/widgets/files_screen/custom_image_widget.dart';
 import 'package:eva_icons_flutter/eva_icons_flutter.dart';
-import 'package:flutter/cupertino.dart';
 import 'package:flutter/material.dart';
 
 class DisplayFilesScreen extends StatelessWidget {
@@ -35,7 +34,7 @@ class DisplayFilesScreen extends StatelessWidget {
         onPressed: () async {
           await FirebaseService.uploadFile(folderId: folderId);
         },
-        child: Icon(
+        child: const Icon(
           EvaIcons.fileAdd,
           color: Colors.white,
         ),
@@ -46,8 +45,8 @@ class DisplayFilesScreen extends StatelessWidget {
               : FirebaseService.getFilesAccordingToType(fileType: type),
           builder: (context, snapshot) {
             if (snapshot.connectionState == ConnectionState.waiting) {
-              return Center(
-                child: const CircularProgressIndicator(
+              return const Center(
+                child: CircularProgressIndicator(
                   color: Colors.deepOrange,
                 ),
               );
@@ -56,7 +55,7 @@ class DisplayFilesScreen extends StatelessWidget {
               return Center(
                 child: Column(
                   children: [
-                    Text("Couldn't get data, please try again later."),
+                    const Text("Couldn't get data, please try again later."),
                     ElevatedButton(
                       style: ElevatedButton.styleFrom(
                         shape: RoundedRectangleBorder(
@@ -68,7 +67,7 @@ class DisplayFilesScreen extends StatelessWidget {
                         FirebaseService.getFilesForSelectedFolder(
                             folderId: folderId);
                       },
-                      child: Text("Try again"),
+                      child: const Text("Try again"),
                     ),
                   ],
                 ),
@@ -83,7 +82,7 @@ class DisplayFilesScreen extends StatelessWidget {
                 files: files,
               );
             }
-            return SizedBox();
+            return const SizedBox();
           }),
     );
   }

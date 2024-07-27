@@ -1,6 +1,5 @@
 import 'package:construct_hub/core/singeltons/connectivity_singelton.dart';
 import 'package:construct_hub/firebase_options.dart';
-import 'package:construct_hub/screens/login_screen.dart';
 import 'package:construct_hub/screens/root_screen.dart';
 import 'package:firebase_core/firebase_core.dart';
 import 'package:flutter/material.dart';
