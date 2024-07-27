@@ -18,7 +18,6 @@ class FilesController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     if (isFolder == false) {
     } else {

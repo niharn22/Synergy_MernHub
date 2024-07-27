@@ -25,11 +25,9 @@ class _DownloadRemoveBottomSheetState extends State<DownloadRemoveBottomSheet> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     file = File(
         '/storage/emulated/0/Download/${widget.file.name.replaceAll(" ", "")}');
-
     isFileExist();
   }
 
@@ -41,8 +39,6 @@ class _DownloadRemoveBottomSheetState extends State<DownloadRemoveBottomSheet> {
   @override
   Widget build(BuildContext context) {
     final controller = Get.put(DownloadDeleteController());
-    print(fileDownloaded);
-
     return Container(
       padding: const EdgeInsets.all(32),
       child: Column(

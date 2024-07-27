@@ -10,11 +10,6 @@ import 'package:mime/mime.dart';
 
 class FirebaseService {
   static Future<void> uploadFolder({required String name}) async {
-    DocumentReference<Map<String, dynamic>> userFolder = await AppValues
-        .userCollection
-        .doc(FirebaseAuth.instance.currentUser!.uid)
-        .collection("folders")
-        .add({"name": name, "date_created": FieldValue.serverTimestamp()});
   }
 
   static Stream<QuerySnapshot<Map<String, dynamic>>> getFoldersSnapShot(

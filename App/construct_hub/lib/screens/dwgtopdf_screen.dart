@@ -1,8 +1,7 @@
-// ignore_for_file: avoid_print, prefer_const_constructors, deprecated_member_use
+// ignore_for_file: avoid_print, prefer_const_constructors, deprecated_member_use, library_private_types_in_public_api, use_build_context_synchronously
 
 import 'dart:async';
 import 'dart:io';
-import 'dart:typed_data';
 import 'package:flutter/material.dart';
 import 'package:file_picker/file_picker.dart';
 import 'package:http/http.dart' as http;
@@ -12,12 +11,13 @@ class DwgtoPdfScreen extends StatefulWidget {
   const DwgtoPdfScreen({Key? key}) : super(key: key);
 
   @override
-  _DwgtoPdfScreenState createState() => _DwgtoPdfScreenState();
+  _DwgtoPdfScreenState createState() {
+    return _DwgtoPdfScreenState();
+  }
 }
 
 class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
   File? _pickedFile;
-  Uint8List? _pdfBytes;
   bool _converting = false;
 
   void _pickFile() async {
@@ -57,10 +57,7 @@ class _DwgtoPdfScreenState extends State<DwgtoPdfScreen> {
     try {
       var response = await request.send();
       if (response.statusCode == 200) {
-        var pdfBytes = await response.stream.toBytes(); // Get PDF bytes
-        setState(() {
-          _pdfBytes = pdfBytes;
-        });
+        setState(() {});
       } else {
         print('Request failed with status: ${response.statusCode}');
       }

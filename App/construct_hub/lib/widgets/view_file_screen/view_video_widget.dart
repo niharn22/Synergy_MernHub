@@ -36,7 +36,6 @@ class _ViewVideoWidgetState extends State<ViewVideoWidget> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     videoPlayerController.dispose();
     chewieController?.dispose();

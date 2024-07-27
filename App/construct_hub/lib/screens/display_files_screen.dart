@@ -51,7 +51,6 @@ class DisplayFilesScreen extends StatelessWidget {
                 ),
               );
             } else if (snapshot.hasError) {
-              print(snapshot.error);
               return Center(
                 child: Column(
                   children: [

@@ -11,8 +11,9 @@ class RootScreen extends StatelessWidget {
   @override
   Widget build(BuildContext context) {
     return Obx(() {
-      print(authController.user);
-      return authController.user.value == null ? const LoginScreen() : HomeScreen();
+      return authController.user.value == null
+          ? const LoginScreen()
+          : HomeScreen();
     });
   }
 }

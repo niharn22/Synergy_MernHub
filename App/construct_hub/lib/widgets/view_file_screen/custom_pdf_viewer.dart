@@ -23,7 +23,6 @@ class _CustomPdfViewerState extends State<CustomPdfViewer> {
 
   @override
   void initState() {
-    // TODO: implement initState
     super.initState();
     initilizePdf();
   }
@@ -45,7 +44,6 @@ class _CustomPdfViewerState extends State<CustomPdfViewer> {
     final directory = await getApplicationDocumentsDirectory();
     log(directory.toString());
     final fileName = File("${directory.path}/${file.name}");
-    print(fileName.path);
     await fileName.writeAsBytes(bytes, flush: true);
     return fileName;
   }

@@ -24,7 +24,6 @@ class _AddFolderDialogState extends State<AddFolderDialog> {
 
   @override
   void dispose() {
-    // TODO: implement dispose
     super.dispose();
     folderNameController.dispose();
   }

@@ -8,8 +8,6 @@ class StorageController extends GetxController {
 
   @override
   void onInit() {
-    // TODO: implement onInit
-
     super.onInit();
     getStorage();
   }
@@ -25,7 +23,6 @@ class StorageController extends GetxController {
         // size += doc.data()["file_size"] as int;
         size += doc["file_size"] as int;
       }
-      print(size);
       return size;
     }));
   }

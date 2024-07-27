@@ -12,7 +12,6 @@ class AuthController extends GetxController {
   late Rx<User?> user = Rx<User?>(FirebaseAuth.instance.currentUser);
   @override
   void onInit() {
-    // TODO: implement onInit
     super.onInit();
     user.bindStream(firebaseAuth.authStateChanges());
   }
@@ -20,8 +19,6 @@ class AuthController extends GetxController {
   Future<void> login() async {
     try {
       GoogleSignInAccount? googleUser = await googleSignIn.signIn();
-      print("sssssssssssssssssss");
-      print(googleUser);
 
       if (googleUser != null) {
         GoogleSignInAuthentication googleAuth = await googleUser.authentication;
@@ -40,7 +37,6 @@ class AuthController extends GetxController {
         });
       }
     } catch (e) {
-      print(e);
       if (e is PlatformException) {
         if (e.code == "network_error") {
           Get.snackbar(

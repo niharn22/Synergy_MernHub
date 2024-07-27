@@ -23,7 +23,6 @@ class FilesAndFolderController extends GetxController {
       final List<FileModel> files = [];
       for (var doc in querySnapShot.docs) {
         files.add(FileModel.fromFireStore(fireStoreData: doc.data()));
-        print(files);
       }
       return files;
     }));

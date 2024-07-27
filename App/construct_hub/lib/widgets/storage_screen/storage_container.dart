@@ -40,7 +40,6 @@ class StorageContainer extends StatelessWidget {
           ),
         ]),
         child: Obx(() {
-          print(storageController.totaleSize.value);
           return Column(
             children: [
               Padding(
